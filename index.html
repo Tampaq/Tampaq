@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+   <html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+      <!--=============== FAVICON ===============-->
+      <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+
+      <!--=============== REMIXICONS ===============-->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css">
+
+      <!--=============== SWIPER CSS ===============-->
+      <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+
+      <!--=============== CSS ===============-->
+      <link rel="stylesheet" href="assets/css/styles.css"> 
+
+   </head>
+   <script type="text/javascript">
+var _iub = _iub || [];
+_iub.csConfiguration = {"siteId":4058605,"cookiePolicyId":93911980,"lang":"pt-BR","storage":{"useSiteId":true}};
+</script>
+<script type="text/javascript" src="https://cs.iubenda.com/autoblocking/4058605.js"></script>
+<script type="text/javascript" src="//cdn.iubenda.com/cs/iubenda_cs.js" charset="UTF-8" async></script>
+   <body>
+      <!--==================== HEADER ====================-->
+      <header class="header" id="header">
+         <nav class="nav container">
+            <a href="#" class="nav__logo">
+               <i class="ri-book-3-line"></i> Tam Paq
+            </a>
+            <div class="nav__menu">
+               <ul class="nav__list">
+                  <li class="nav__item">
+                     <a href="#home" class="nav__link active-link">
+                        <i class="ri-home-line"></i>
+                        <span>Home</span>
+                     </a>
+                  </li>
+
+                  <li class="nav__item">
+                     <a href="#featured" class="nav__link">
+                        <i class="ri-book-3-line"></i>
+                        <span>Featured</span>
+                     </a>
+                  </li>   
+                  
+                  <li class="nav__item">
+                     <a href="#discount" class="nav__link">
+                        <i class="ri-price-tag-3-line"></i>
+                        <span>Discount</span>
+                     </a>
+                  </li> 
+
+                
+               </ul>
+            </div>
+            <div class="nav__actions">
+               <i class="ri-search-line search-button" id="search-button"></i>
+               <!--Login Button-->
+               <i class="ri-user-line login-button" id="login-button"></i>
+               <!--theme button-->
+               <i class="ri-moon-line change-theme" id="theme-button"></i>
+               <i class="ri-shopping-cart-line" id="cart-icon" title="Carrinho"></i>
+            </div>
+         </nav>
+      </header>
+
+
+
+      <!--==================== SEARCH ====================-->
+      <div class="search" id="search-content">
+         <form action="#" class="search__form">
+            <i class="ri-search-line search__icon"></i>
+            <input type="search" placeholder="oque você está procurando?" class="search__input">
+         </form>
+         <i class="ri-close-line search__close" id="search-close"></i>
+      </div>
+
+      <!--==================== LOGIN ====================-->
+      <div class="login grid" id="login-content">
+         <form action="#" class="login__form grid">
+         <h3 class="login__title">Log in</h3>
+         <div class="login__group grid">
+            <div>
+               <label for="login-email" class="login__label">Email</label>
+               <input type="email" placeholder="Digite seu email" id="login-email" class="login__input">
+            </div>
+            <div>
+               <label for="login-pass" class="login__label">Password</label>
+               <input type="password" placeholder="Digite sua senha" id="login-pass" class="login__input">
+            </div>
+         </div>
+         <div>
+            <span class="login__signup">
+               Você tem uma conta <a href="criar_conta.html">Crie uma conta</a>
+            </span>
+            <a href="#" class="login__forgot">
+               você esqueceu sua senha?
+            </a>
+            <button type="submit" class="login__button button">Faça login</button>
+         </div>
+         </form>
+         <i class="ri-close-line login__close" id="login-close"></i>
+      </div>
+      <!--shopping Cart-->
+<aside class="cart-sidebar" id="cart-sidebar">
+    <header>
+      <span>Carrinho</span>
+      <button class="close-cart" id="close-cart">&times;</button>
+    </header>
+    <div class="cart-items" id="cart-items">
+      <!-- Produtos do carrinho vão aparecer aqui -->
+      <div class="cart-item">
+        <img src="assets/img/A maldição do mar.jpeg" alt="Livro 1">
+        <div class="cart-item-info">
+          <h4>A maldição do mar</h4>
+          <span>Qtd: 1 | R$27,00</span>
+        </div>
+      </div>
+      <div class="cart-item">
+        <img src="assets/img/As Crônicas de Nárnia - Coleção de Luxo_ O Leão, a Feiticeira e o Guarda-roupa.jpg" alt="Livro 2">
+        <div class="cart-item-info">
+          <h4>As Crônicas de Nárnia</h4>
+          <span>Qtd: 2 | R$42,00</span>
+        </div>
+      </div>
+      <!-- Pode adicionar mais itens aqui dinamicamente -->
+    </div>
+    <footer class="cart-footer">
+      <h2>total: R$69,00 <br>
+          Ou alugue as duas unidades: <br>
+           R$21,00/por mês </h2>
+      <button class="finishshop" id="checkout-btn">Finalizar Compra</button>
+    </footer>
+  </aside>
+
+      <!--==================== MAIN ====================-->
+      <main class="main">
+         <!--==================== HOME ====================-->
+         <section class="home section" id="home">
+            <div class="home__container container grid">
+               <div class="home__data">
+                  <h1 class="home__title">
+                     Explore o Vasto<br>
+                     Mundo da Leitura
+                  </h1>
+                  <p class="home__description">
+                     Ache os melhores Livros dos seus escritores favoritos, explore diversas obras em variados gêneros literários de seu interesse, consiga promoções de até 30% de desconto e muito mais.
+                  </p>
+                  <a href="#" class="button">Explore agora</a>
+               </div>
+               <div class="home__images">
+                  <div class="home__swiper swiper">
+                     <div class="swiper-wrapper">
+                        <article class="home__article swiper-slide">
+                           <img src="assets/img/Meu policail.jpg" alt="image" class="home__img">
+                        </article>
+                        <article class="home__article swiper-slide">
+                           <img src="assets/img/Harry Potter e o Cálice de Fogo_ 4.jpeg" alt="image" class="home__img">
+                        </article><article class="home__article swiper-slide">
+                           <img src="assets/img/As Crônicas de Nárnia - Coleção de Luxo_ O Leão, a Feiticeira e o Guarda-roupa.jpg" alt="image" class="home__img">
+                        </article><article class="home__article swiper-slide">
+                           <img src="assets/img/A rainha vermelha.jpeg" alt="image" class="home__img">
+                        </article>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+
+         <!--==================== SERVICES ====================-->
+         <section>
+            <div class="slider">
+      <div class="list">
+        <div class="item active">
+            <img src="Books/Drama/CRIME E CASTIGO- DOSTOIÉVSKI.jpg" alt="" class="src">
+            <div class="content">
+                <p>DRAMA</p>
+                <h2>Crime e Castigo</h2>
+                <p>
+                    y text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only
+                    five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of  
+                </p>
+            <button class= "S1" onclick="window.location.href='Categorias/Drama/Drama.html'">Saiba mais</button>
+
+            </div>
+       </div>
+       <div class="item">
+            <img src="Books/Ficção/A rainha vermelha.jpeg" alt="" class="src">
+            <div class="content">
+                <p>Ficção</p>
+                <h2>A Rainha Vermelha</h2>
+                <p>
+                    y text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only
+                    five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of  
+                </p>
+            <button class= "S2"  onclick="window.location.href='Categorias/Ficção/Ficção.html'">Saiba mais</button>
+
+            </div>
+       </div>
+       <div class="item">
+            <img src="Books/Br/ahora.jpg" alt="" class="src">
+            <div class="content">
+                <p>LITERATURA BRASILEIRA</p>
+                <h2>A Hora Da Estrela</h2>
+                <p>
+                    y text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only
+                    five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of  
+                </p>
+            <button class= "S3", onclick="window.location.href='Categorias/Brasileiros/Brasileiros.html'">Saiba mais</button>
+            </div>
+       </div>
+       
+       <div class="item">
+            <img src="Books/Romance/A culpa é das estrelas.jpg" alt="" class="src">
+            <div class="content">
+                <p>Romance</p>
+                <h2>A Culpa É Das Estrelas</h2>
+                <p>
+                    y text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only
+                    five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of  
+                </p>
+            <button class= "S4", onclick="window.location.href='Categorias/Romance/Romance.html'">Saiba mais</button>
+            </div>
+       </div>
+       <div class="item">
+            <img src="Books/Suspense/jantar secreto.jpg" alt="" class="src">
+            <div class="content">
+                <p>Suspense</p>
+                <h2>Jantar Secreto</h2>
+                <p>
+                    y text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only
+                    five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of  
+                </p>
+            <button class= "S5", onclick="window.location.href='Categorias/Suspense/Suspense.html'">Saiba mais</button>
+            </div>
+       </div>
+    </div>
+    <!--BUTAO-->
+    <div class="arrows">
+        <button id="prev"><i class="ri-arrow-left-s-line"></i></button>
+        <button id="next"><i class="ri-arrow-right-s-line"></i></button>
+    </div>
+    <!--coisado-->
+    <div class="thumbnail">
+        <div class="item active">
+            <img src="Books/Drama/CRIME E CASTIGO- DOSTOIÉVSKI.jpg" alt="">     
+            <div class="content">
+                <h3>DRAMA</h3>
+            </div>
+        </div>
+        <div class="item">
+            <img src="Books/Ficção/A rainha vermelha.jpeg" alt="">
+            <div class="content">
+                <h3>FICÇÃO</h3>
+            </div>
+        </div>
+        <div class="item">
+            <img src="Books/Br/ahora.jpg" alt="">
+            <div class="content">
+                <h3>LITERATURA BRASILEIRA</h3>
+            </div>
+        </div>
+        <div class="item">
+            <img src="Books/Romance/A culpa é das estrelas.jpg" alt="">
+            <div class="content">
+               <h3>ROMANCE</h3>
+            </div>
+        </div>
+        <div class="item">
+            <img src="Books/Suspense/jantar secreto.jpg"alt="">
+            <div class="content">
+                <h3>SUSPENSE</h3>
+            </div>
+        </div>
+    </div>
+         </section>
+
+         <!--==================== FEATURED ====================-->
+         <section class="featured section" id="featured">
+            <h2 class="section__title">
+            Mais Procurados
+            </h2>
+            <div class="featured__container container">
+               <div class="featured__swiper swiper">
+                  <div class="swiper-wrapper">
+                     <article class="featured__card swiper-slide">
+                        <img src="assets/img/LIVRO_ MEMÓRIAS PÓSTUMAS DE BRAS CUBA.jpg" alt="" class="featured__img">
+                        <h2 class="featured__title">Maior em Vendas</h2>
+                       <h3 class="Buy__title">Compre</h3>
+                        <div class="featured__prices"> 
+                           <span class="featured__discount">R$14,00</span>
+                           <span class="featured__price">R$21,58</span>
+                        </div>
+                        <h3 class="Aluged__title">Alugue</h3>
+                         <div class="featured__prices"> 
+                           <span class="featured__discount">R$6.00/Por mês</span>
+                        </div>
+                        <button class="button">Adicionar ao carrinho</button>
+                        <div class="featured__actions">
+                           <button><i class="ri-heart-3-line"></i></button>
+                           <button><i class="ri-eye-line"></i></button>
+                        </div>
+                     </article>
+
+                          <article class="featured__card swiper-slide">
+                        <img src="assets/img/A culpa é das estrelas.jpg" alt="" class="featured__img">
+                        <h2 class="featured__title">Mais Popular</h2>
+                       <h3 class="Buy__title">Compre</h3>
+                        <div class="featured__prices"> 
+                           <span class="featured__discount"><R132></R132>.00</span>
+                           <span class="featured__price">R$59.00</span>
+                        </div>
+                        <h3 class="Aluged__title">Alugue</h3>
+                         <div class="featured__prices"> 
+                           <span class="featured__discount">R$11.00/Por mês</span>
+                        </div>
+                        <button class="button">Adicionar ao carrinho</button>
+                        <div class="featured__actions">
+                           <button><i class="ri-heart-3-line"></i></button>
+                           <button><i class="ri-eye-line"></i></button>
+                        </div>
+                     </article>  
+
+                     <article class="featured__card swiper-slide">
+                        <img src="assets/img/Amanhecer Crepúsculo Breaking Dawn Twilight Stephenie Meyer.jpg" alt="" class="featured__img">
+                        <h2 class="featured__title">Mais Popular</h2>
+                    <h3 class="Buy__title">Compre</h3>
+                        <div class="featured__prices"> 
+                           <span class="featured__discount">R$44.50</span>
+                           <span class="featured__price">R$89.90</span>
+                        </div>
+                        <h3 class="Aluged__title">Alugue</h3>
+                         <div class="featured__prices"> 
+                           <span class="featured__discount">R$16.00/Por mês</span>
+                        </div>
+                        <button class="button">Adicionar ao carrinho</button>
+                        <div class="featured__actions">
+                           <button><i class="ri-heart-3-line"></i></button>
+                           <button><i class="ri-eye-line"></i></button>
+                        </div>
+                     </article>   
+
+                     <article class="featured__card swiper-slide" data-title="A maldição do mar" data-img="assets/img/A maldição do mar.jpeg" data-price="72.00" data-discount="42.00" data-rent="12.00">
+                        <img src="assets/img/A maldição do mar.jpeg" alt="" class="featured__img">
+                        <h2 class="featured__title">Mais Popular</h2>
+                    <h3 class="Buy__title">Compre</h3>
+                        <div class="featured__prices"> 
+                           <span class="featured__discount">R$31.00</span>
+                           <span class="featured__price">R$59.90</span>
+                        </div>
+                        <h3 class="Aluged__title">Alugue</h3>
+                         <div class="featured__prices"> 
+                           <span class="featured__discount">R$11.50/Por mês</span>
+                        </div>
+                        <button class="button">Adicionar ao carrinho</button>
+                        <div class="featured__actions">
+                           <button><i class="ri-heart-3-line"></i></button>
+                           <button><i class="ri-eye-line"></i></button>
+                        </div>
+                     </article> 
+
+                     <article class="featured__card swiper-slide" data-title="As Crônicas de Nárnia" data-img="assets/img/As Crônicas de Nárnia - Coleção de Luxo_ O Leão, a Feiticeira e o Guarda-roupa.jpg" data-price="52.99" data-discount="38.00" data-rent="9.00">
+                        <img src="assets/img/As Crônicas de Nárnia - Coleção de Luxo_ O Leão, a Feiticeira e o Guarda-roupa.jpg" alt="" class="featured__img">
+                        <h2 class="featured__title">Mais Alugado</h2>
+                       <h3 class="Buy__title">Compre</h3>
+                        <div class="featured__prices"> 
+                           <span class="featured__discount">R$39.70</span>
+                           <span class="featured__price">R$59.90</span>
+                        </div>
+                        <h3 class="Aluged__title">Alugue</h3>
+                         <div class="featured__prices"> 
+                           <span class="featured__discount">R$13.00/Por mês</span>
+                        </div>
+                        <button class="button">Adicionar ao carrinho</button>
+                        <div class="featured__actions">
+                           <button><i class="ri-heart-3-line"></i></button>
+                           <button><i class="ri-eye-line"></i></button>
+                        </div>
+                     </article>   
+
+                      <article class="featured__card swiper-slide">
+                        <img src="assets/img/Meu policail.jpg" alt="" class="featured__img">
+                        <h2 class="featured__title">Mais Popular</h2>
+                      <h3 class="Buy__title">Compre</h3>
+                        <div class="featured__prices"> 
+                           <span class="featured__discount">R$13.45</span>
+                           <span class="featured__price">R$25.93</span>
+                        </div>
+                        <h3 class="Aluged__title">Alugue</h3>
+                         <div class="featured__prices"> 
+                           <span class="featured__discount">R$8.70/Por mês</span>
+                        </div>
+                        <button class="button">Adicionar ao carrinho</button>
+                        <div class="featured__actions">
+                           <button><i class="ri-heart-3-line"></i></button>
+                           <button><i class="ri-eye-line"></i></button>
+                        </div>
+                     </article>  
+
+                      <article class="featured__card swiper-slide">
+                        <img src="assets/img/Vermelho, branco e sangue azul.jpg" alt="" class="featured__img">
+                        <h2 class="featured__title">Mais Popular</h2>
+                       <h3 class="Buy__title">Compre</h3>
+                        <div class="featured__prices"> 
+                           <span class="featured__discount">R$21.10</span>
+                           <span class="featured__price">R$42.22</span>
+                        </div>
+                        <h3 class="Aluged__title">Alugue</h3>
+                         <div class="featured__prices"> 
+                           <span class="featured__discount">R$9.22/Por mês</span>
+                        </div>
+                        <button class="button">Adicionar ao carrinho</button>
+                        <div class="featured__actions">
+                           <button><i class="ri-heart-3-line"></i></button>
+                           <button><i class="ri-eye-line"></i></button>
+                        </div>
+                     </article>  
+
+                     <article class="featured__card swiper-slide">
+                        <img src="assets/img/A hora da estrela, Clarice Lispector.jpg" alt="" class="featured__img">
+                        <h2 class="featured__title">Mais Popular</h2>
+                       <h3 class="Buy__title">Compre</h3>
+                        <div class="featured__prices"> 
+                           <span class="featured__discount">R$13.00</span>
+                           <span class="featured__price">R$27.90</span>
+                        </div>
+                        <h3 class="Aluged__title">Alugue</h3>
+                         <div class="featured__prices"> 
+                           <span class="featured__discount">R$8.55/Por mês</span>
+                        </div>
+                        <button class="button">Adicionar ao carrinho</button>
+                        <div class="featured__actions">
+                           <button><i class="ri-heart-3-line"></i></button>
+                           <button><i class="ri-eye-line"></i></button>
+                        </div>
+                     </article>  
+
+                     <article class="featured__card swiper-slide">
+                        <img src="assets/img/achados e perdidods.jpg" alt="" class="featured__img">
+                       <h2 class="featured__title">2º Livro da Triologia Bill Hodges</h2>
+                        <h3 class="Buy__title">Compre</h3>
+                        <div class="featured__prices"> 
+                           <span class="featured__discount">R$42.00</span>
+                           <span class="featured__price">R$74.60</span>
+                        </div>
+                        <h3 class="Aluged__title">Alugue</h3>
+                         <div class="featured__prices"> 
+                           <span class="featured__discount">R$18.00/Por mês</span>
+                        </div>
+                        <button class="button">Adicionar ao carrinho</button>
+                        <div class="featured__actions">
+                           <button><i class="ri-heart-3-line"></i></button>
+                           <button><i class="ri-eye-line"></i></button>
+                        </div>
+                     </article>   
+
+                      <article class="featured__card swiper-slide">
+                        <img src="assets/img/HP enigma do principe.jpeg" alt="" class="featured__img">
+                        <h2 class="featured__title">Mais Relevante do Gênero Fantasia</h2>
+                        <h3 class="Buy__title">Compre</h3>
+                        <div class="featured__prices">
+                           <span class="featured__discount">R$36.00</span>
+                           <span class="featured__price">R$57.63</span>
+                        </div>
+                        <h3 class="Aluged__title">Alugue</h3>
+                         <div class="featured__prices"> 
+                           <span class="featured__discount">R$14.00/Por mês</span>
+                        </div>
+                        <button class="button">Adicionar ao carrinho</button>
+                        <div class="featured__actions">
+                           <button><i class="ri-heart-3-line"></i></button>
+                           <button><i class="ri-eye-line"></i></button>
+                        </div>
+                     </article>
+                  </div>
+                  <div class="swiper-button-prev">
+                     <i class="ri-arrow-left-s-line"></i>
+                  </div>
+                  <div class="swiper-button-next">
+                     <i class="ri-arrow-right-s-line"></i>
+                  </div>
+               </div>
+            </div>
+         </section>
+         
+
+         <!--==================== DISCOUNT ====================-->
+         <section class="discount section" id="discount">
+            <div class="discount__container container grid">
+               <div class="discount__data">
+                  <h2 class="discount__title section__title">
+                     Acima de 15% de desconto em primeiro aluguel ou compra
+                  </h2>
+                  <p class="discount__description">
+                     Aproveite as oportunidades de conhecer novas histórias 
+                     com os descontos que oferecemos, alugue ou compre livros 
+                     no preço que cabe no seu bolso!
+                  </p>
+                  <a href="#" class="button">Compre agora</a>
+               </div>
+               <div class="discount__images">
+                  <img src="assets/img/A hora da estrela, Clarice Lispector.jpg" alt="image" class="discount__img-1">
+                  <img src="assets/img/Vermelho, branco e sangue azul.jpg" alt="image" class="discount__img-2">
+               </div>
+            </div>
+         </section>
+      </main>
+
+      <!--==================== FOOTER ====================-->
+      <footer class="footer">
+         <div class="footer__container container grid">
+            <div>
+               <a href="#" class="footer__logo">
+                  <i class="ri-book-3-line"></i>Tam Paq
+               </a>
+               <p class="footer__description">
+                  Ache e explore os melhores <br>
+                  Livros do seus gêneros <br>
+                  Literários favoritos <br>
+                  OBS: todos os livros são vendido e alugados em capa comum ;)
+               </p>
+            </div>
+            <div class="footer__data grid">
+               <div>
+                  <h3 class="footer__title">Sobre</h3>
+                  <ul class="footer__links">
+
+                      <li>
+                        <a href="https://www.iubenda.com/privacy-policy/93911980/cookie-policy" class="iubenda-white iubenda-noiframe iubenda-embed iubenda-noiframe " title="Política de Cookies ">Política de Cookies</a><script type="text/javascript">(function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src="https://cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);</script>
+                     </li>
+
+                      <li>
+                        <a href="https://www.iubenda.com/privacy-policy/93911980" class="iubenda-white iubenda-noiframe iubenda-embed iubenda-noiframe " title="Política de Privacidade ">Política de Privacidade</a><script type="text/javascript">(function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src="https://cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);</script>
+                     </li>
+                  </ul>
+               </div>
+            
+                  <div>
+                  <h3 class="footer__title">Contato</h3>
+                  <ul class="footer__links">
+                     <li>
+                        <address class="footer__info">
+                           RUA ANTONIO GONCALVES DA SILVA PATATIVA DO ASSARE, SN PREDIO PROPRIO. SEDE. <br>
+                           63170-000, Araripe - CE, Brasil
+                        </address>
+                     </li>
+                     <li>
+                        <address class="footer__info">
+                          tammpaqq@gmail.com <br>
+                          (88) 6126-256-296
+                        </address>
+                     </li>
+                  </ul>
+               </div>
+                <div>
+                  <h3 class="footer__title">Nossas Redes</h3>
+                  <div class="footer__social">
+                     <a href="https://www.instagram.com/tam.paq" class="footer__social-link">
+                        <i class="ri-instagram-line"></i>
+                     </a>
+                      <a href="https://github.com/Tampaq/3a-propriety.git" class="footer__social-link">
+                        <i class="ri-github-fill"></i>
+                     </a>
+                  </div>
+               </div>
+            
+            </div>
+         </div>
+      </footer>
+
+      <!--========== SCROLL UP ==========-->
+      <a href="#" class="scrollup" id="scroll-up">
+         <i class="ri-arrow-up-line"></i>
+      </a>
+
+      <!--=============== SCROLLREVEAL ===============-->
+      <script src="assets/js/scrollreveal.min.js"></script>
+
+      <!--=============== SWIPER JS ===============-->
+      <script src="assets/js/swiper-bundle.min.js"></script>
+
+      <!--=============== MAIN JS ===============-->
+      <script src="assets/js/main.js"></script>
+<script>
+let items = document.querySelectorAll('.slider .list .item');
+let next = document.getElementById('next');
+let prev = document.getElementById('prev');
+let thumbnails = document.querySelectorAll('.thumbnail .item');
+
+// configuracao 
+let countItem = items.length;
+let itemActive = 0;
+//no click
+next.onclick = function(){
+    itemActive = itemActive + 1;
+    if(itemActive >= countItem){
+        itemActive = 0;
+    }
+    showSlider();
+}
+
+prev.onclick = function(){
+    itemActive = itemActive - 1;
+    if(itemActive < 0){
+        itemActive = countItem -1;
+    }
+    showSlider();
+
+}
+ //slide passando sozinho
+
+
+function showSlider(){
+    //rwmover o item veio
+    let itemActiveOld = document.querySelector('.slider .list .item.active');
+    let thumbnailActiveOld = document.querySelector('.thumbnail .item.active');
+    itemActiveOld.classList.remove('active');
+    thumbnailActiveOld.classList.remove('active');
+
+    //active new coiso
+    items[itemActive].classList.add('active');
+    thumbnails[itemActive].classList.add('active');
+}
+
+
+
+//Click thumbnail
+thumbnails.forEach((thumnail, index) =>{
+    thumbnails.addEventListener('click', () => {
+    itemActive = index;
+    showSlider();
+
+    })
+})
+
+</script>
+   </body>
+</html>
