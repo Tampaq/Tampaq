@@ -1,4 +1,0 @@
-# Tampaq
-# Tampaq
-# Tampaq
-# Tampaq
