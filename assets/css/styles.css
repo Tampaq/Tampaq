@@ -719,7 +719,7 @@ color: var(--first-color);
 
 }
 /* For small devices */
-@media screen and (max-width: 375px){
+@media screen and (min-width: 375px) and (max-width:425){
   .container{
     margin-inline: 1rem;
   }
