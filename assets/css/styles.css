@@ -715,8 +715,11 @@ color: var(--first-color);
 }
 
 /*=============== BREAKPOINTS ===============*/
+@media screen and (min-width: 321) and (max-width:449){
+
+}
 /* For small devices */
-@media screen and (max-width: 320px){
+@media screen and (max-width: 375px){
   .container{
     margin-inline: 1rem;
   }
