@@ -715,11 +715,11 @@ color: var(--first-color);
 }
 
 /*=============== BREAKPOINTS ===============*/
-@media screen and (min-width: 321) and (max-width:449){
+@media screen and (min-width: 321px) and (max-width:449px){
 
 }
 /* For small devices */
-@media screen and (min-width: 375px) and (max-width:425){
+@media screen and (max-width: 375px) and (max-width:425){
   .container{
     margin-inline: 1rem;
   }
@@ -740,6 +740,12 @@ color: var(--first-color);
 @media screen and (min-width: 450px){
 .featured__card{
   width: 290px;
+}
+.featured__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
 }
 
 }
