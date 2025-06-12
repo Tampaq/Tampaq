@@ -717,7 +717,7 @@ color: var(--first-color);
 /*=============== BREAKPOINTS ===============*/
 
 /* For small devices */
-@media screen and (min-width: 300px){
+ @media (max-width: 768px){
   .container{
     margin-inline: 1rem;
   }
@@ -735,7 +735,7 @@ color: var(--first-color);
 }
 
 /* For medium devices */
-@media screen and (min-width: 450px){
+@media (min-width: 769px) and (max-width: 1024px){
 .featured__card{
   width: 290px;
 }
